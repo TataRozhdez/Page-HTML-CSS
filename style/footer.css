@@ -1,0 +1,138 @@
+.footer {
+  background-color: #000D21;
+  display: flex;
+}
+.app {
+  margin: 0 auto;
+  width: 1216px;
+}
+.frame {
+  width: 488px;
+  height: 152px;
+}
+.game {
+  display: grid;
+  grid-template-rows: 64px 64px;  
+  grid-template-columns: 176px auto auto;
+  grid-gap: 16px 32px; 
+  margin-top: 32px;
+}
+.poker {
+  grid-column: 1;
+  grid-row: 1;
+}
+.casino {
+  grid-column: 1;
+  grid-row: 2;
+}
+.first-lables {
+  grid-column: 2;
+  grid-row: 1 / 2;
+}
+.second-lables {
+  grid-column: 3;
+  grid-row: 1 / 2;
+}
+.footer-text {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  color: #CCCCCC;
+  margin-bottom: 24px;
+  text-align: left;
+}
+hr {
+  margin: 32px 0;
+  border: 1px solid #423A4D;
+}
+
+@media (max-width: 1250px) {
+  .app {
+    margin: 0 20px;
+    width: auto;
+  }
+  .first-lables,
+  .second-lables {
+    width: calc(100% - 5px)
+  }
+}
+@media (max-width: 959px) {
+  .casino,
+  .poker {
+    width: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .app {
+    margin: 0 auto;
+    width: 500px;
+  }
+  .game {
+    grid-template-rows: 81px auto auto;  
+    grid-template-columns: 232px 232px ;
+    grid-gap: 32px 16px; 
+  }
+  .poker {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .casino {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .first-lables {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+  .second-lables {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+  .casino, 
+  .poker {
+    width: 231px;
+  }
+  .first-lables,
+  .second-lables {
+    width: 495px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-text {
+    margin: 0 25px 21px 24px;
+  }
+  .app {
+    margin: 0 auto;
+    min-width: 300px;
+  }
+  .casino, 
+  .poker {
+    min-width: 128px;
+  }
+  .first-lables,
+  .second-lables {
+    min-width: 272px;
+  }
+}
+@media (max-width: 461px) {
+  .app {
+    margin: 0 auto;
+    width: 300px;
+    align-content: center;  
+    justify-content: space-evenly;
+  }
+  .casino, 
+  .poker {
+    width: 128px;
+    align-self: stretch;
+  }
+  .first-lables,
+  .second-lables {
+    width: 272px;
+    align-self: stretch;
+  }
+  .game {
+    grid-template-rows: 81px auto auto;  
+    grid-template-columns: repeat(2, calc(50% - 16px));
+  }
+}

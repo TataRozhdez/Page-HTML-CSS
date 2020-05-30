@@ -1,0 +1,35 @@
+@import './variables.css';
+@import './header.css';
+@import './awards.css';
+@import './bonus.css';
+@import './footer.css';
+
+@font-face {
+  font-family: Noto Sans Arabic;
+  src: url(../fonts/NotoSansArabicUI-Medium.ttf),
+       url(../fonts/NotoSansArabicUI-Regular.ttf),
+       url(../fonts/NotoSansArabicUI-Thin.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Noto Sans Arabic, sans-serif;
+  color: var(--main-text-color);
+  letter-spacing: 0.444444px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+body {
+  margin: 0;
+  padding: 0;
+}

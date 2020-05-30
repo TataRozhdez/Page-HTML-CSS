@@ -1,0 +1,226 @@
+@import './variables.css';
+
+.header {
+  background: center / 90% no-repeat url(../img/header/bg-mask.svg), 
+  center / cover no-repeat url(../img/header/bg.svg);
+  height: 666px;
+  position: relative;
+}
+.girl-right {
+  position: absolute;
+  top: 33px;
+  left: 65%;
+  z-index: 1;
+}
+.girl-left {
+  position: absolute;
+  top: 22px;
+  right: 65%;
+  z-index: 3;
+}
+.registration {
+  width: 410px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9;
+  position: absolute;
+  right: 40%;
+}
+.logo {
+  width: 240px;
+  height: 80px;
+  margin: 64px 0 72px;
+}
+.logIn, 
+ #telNumber, 
+.tel-operator  {
+  outline: none;
+  height: 64px;
+  line-height: 28px;
+  letter-spacing: 0.444444px;
+  color: var(--main-text-color);
+  text-align: right;
+  background: var(--main-input-color);
+  border: 2px solid #366799;
+  box-sizing: border-box;
+  box-shadow: 0px 19px 38px rgba(0, 0, 0, 0.15), 0px 15px 12px rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+}
+.logIn:hover,
+#telNumber:hover,
+.tel-operator:hover {
+  background: var(--input-color-hover);
+}
+.logIn {
+  width: 384px;
+  padding: 20px 22px 20px 0;
+  font-size: 20px;
+  margin-bottom: 21px;
+}
+.logIn::placeholder,
+#telNumber::placeholder {
+  color: var(--main-text-color);
+  font-family: Noto Sans Arabic;
+}
+.label-number {
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.444444px;
+  font-size: 20px;
+  line-height: 42px;
+  margin-bottom: 17px;
+}
+.tel {
+  display: flex;
+  margin-bottom: 16px;
+}
+#telNumber,
+.tel-operator {
+  padding: 16px;
+  font-weight: 500;
+  font-size: 24px;
+}
+#telNumber {
+  margin-right: 8px;
+  width: 219px;
+}
+.tel-operator {
+  width: 157px;
+}
+.opertor {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.checkbox {
+  margin-bottom: 47px;
+}
+#check-year {
+  display: none;
+}
+#check-year + label {
+  padding-right: 16px;
+  cursor: pointer;
+}
+#check-year + label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #FFC800;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+#check-year:checked + label::before {
+  background: center / 50% no-repeat url(../img/header/check.svg), #FFC800;
+} 
+.submit {
+  color: var(--main-text-color);
+  font-family: Noto Sans Arabic;
+  text-align: center;
+  letter-spacing: 1.35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 76px;
+  width: 400px;
+  height: 80px;
+  background: linear-gradient(89.2deg, #FFDC25 0.14%, rgba(255, 138, 0, 0.73) 99.29%), #FFD90F;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 1250px) {
+  .header {
+    overflow: hidden;
+  }
+  .girl-right {
+    right: -2%;
+  }
+  .girl-left {
+    left: -2%;
+  }
+  .registration {
+    right: 33%;
+  }
+} 
+@media (max-width: 959px) {
+  .girl-left {
+    left: -15%;
+    top: 14%;
+    width: 314px;
+  }
+  .girl-right {
+    right: -8%;
+    top: 16%;
+    width: 355px;
+  }
+  .registration {
+    width: 450px;
+  }
+} 
+@media (max-width: 767px) {
+  .registration {
+    width: auto;
+    right: 22%;
+  }
+  .girl-right {
+    right: -18%;
+  }
+  .girl-left {
+    transform: translateX(-30px);
+  }
+}
+@media (max-width: 574px) {
+  .header {
+    height: 933px;
+  }
+  .registration {
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background: 88% 190% / 100% no-repeat url(../img/header/bg-form-mobile.svg);
+  }
+  .girl-right {
+    width: 484px;
+    top: 20%;
+    left: -29%;
+  }
+  .girl-left {
+    width: 415px;
+    top: 20%;
+    right: 33%;
+  }
+  .logo {
+    margin: 40px 0 333px;
+  }
+  .submit {
+    width: 288px;
+    height: 80px;
+  }
+  .logIn, 
+  #telNumber, 
+  .tel-operator {
+   width: 272px;
+ }
+ .tel {
+   display: block;
+ }
+ #telNumber {
+   margin: 16px 0 0;
+ }
+}
+@media (max-width: 461px) {
+  .registration {
+    background: 88% 125% / 100% no-repeat url(../img/header/bg-form-mobile.svg);
+  }
+  .girl-right {
+    right: -35%;
+  }
+  .girl-left {
+    right: 22%;
+  }
+}

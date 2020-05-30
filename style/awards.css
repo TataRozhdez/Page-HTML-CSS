@@ -1,0 +1,79 @@
+@import './variables.css';
+
+.awards {
+  background: repeat-x url(../img/awards/bg.svg);
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  justify-content: center;
+}
+.awards-elem {
+  width: 280px;
+  margin: 26px 8px;
+}
+
+@media (max-width: 1250px) {
+  .awards {
+    grid-template-columns: repeat(4, calc(25% - 40px));
+  }
+  .awards-elem {
+    width: auto;
+  }
+}
+@media (max-width: 959px) {
+  .awards-elem {
+    margin: 26px auto;
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .awards {
+    grid-template-columns: repeat(2, 280px);
+    grid-template-rows: repeat(2, auto);
+    background-size: contain;
+    align-self: center;  
+    justify-content: space-evenly;
+  }
+  .cup {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .bag {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .diamond {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .medal {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+@media (max-width: 574px) {
+  .awards {
+    height: auto;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    background: center / cover repeat-y url(../img/awards/bg.svg);
+  }
+  .awards-elem {
+    width: 232px;
+  }
+  .cup {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .bag {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .diamond {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .medal {
+    grid-column: 1;
+    grid-row: 4;
+  }
+}
